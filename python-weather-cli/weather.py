@@ -22,7 +22,7 @@ from datetime import datetime
 from typing import Optional
 
 
-# ─── Configuration ────────────────────────────────────────────────────────────
+
 
 BASE_URL = "https://api.openweathermap.org/data/2.5"
 
@@ -36,7 +36,7 @@ def get_api_key() -> str:
     return key
 
 
-# ─── API calls ────────────────────────────────────────────────────────────────
+
 
 def fetch_current_weather(city: str, api_key: str, units: str = "metric") -> dict:
     """Fetch current weather for a city."""
@@ -64,7 +64,7 @@ def fetch_forecast(city: str, api_key: str, units: str = "metric") -> dict:
     return response.json()
 
 
-# ─── Formatting helpers ───────────────────────────────────────────────────────
+
 
 def wind_direction(degrees: float) -> str:
     """Convert wind degrees to compass direction."""
@@ -183,7 +183,7 @@ def compare_cities(cities: list[str], api_key: str, units: str = "metric") -> No
     print()
 
 
-# ─── CLI ──────────────────────────────────────────────────────────────────────
+
 
 def main():
     parser = argparse.ArgumentParser(description="Weather CLI — powered by OpenWeatherMap")
